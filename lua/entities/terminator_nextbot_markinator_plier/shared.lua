@@ -227,36 +227,14 @@ ENT.MyClassTask = {
 
     end,
     OnDamaged = function( self, data, damage )
-        local onFire = damage:IsDamageType( DMG_BURN ) and self:IsOnFire()
-
         local toleranceTime = data.painToleranceTime or 0
         local tolerance = toleranceTime - CurTime()
         local dealt = damage:GetDamage()
-        if not onFire and dealt < 75 and math.random( 1, dealt ) < tolerance then return end
+        if dealt < 75 and math.random( 1, dealt ) < tolerance then return end
 
         data.painToleranceTime = math.max( toleranceTime + dealt / 2, CurTime() + dealt )
 
-        local path = randomMarkSoundPath( "pain" )
-        local pitchShift = 0
-
-        if onFire then
-            local nextScream = data.nextFireSpeak or 0
-            if nextScream > CurTime() then return end
-            path = randomMarkSoundPath( "pain" )
-            pitchShift = math.random( 0, 20 )
-            data.nextFireSpeak = CurTime() + math.Rand( 0.5, 1.5 )
-
-        elseif ( dealt > 25 and self:Health() <= self:GetMaxHealth() * 0.15 ) or ( dealt > 50 and self:getLostHealth() > 75 ) then
-            path = randomMarkSoundPath( "pain" )
-            timer.Simple( 0.1, function()
-                if not IsValid( self ) then return end
-                if self:Health() <= 0 then return end
-                self:mark_SpeakARandomSound( "pain" )
-
-            end )
-        end
-
-        self:Term_SpeakSoundNow( path, pitchShift )
+        self:Term_SpeakSoundNow( randomMarkSoundPath( "pain" ) )
 
     end,
     OnKilled = function( self, data, attacker, inflictor, ragdoll )
