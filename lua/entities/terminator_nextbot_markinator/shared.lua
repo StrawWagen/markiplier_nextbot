@@ -18,7 +18,7 @@ if CLIENT then
 end
 
 ENT.IsFodder = true
-ENT.CoroutineThresh = terminator_Extras.baseCoroutineThresh / 5.5
+ENT.CoroutineThresh = terminator_Extras.baseCoroutineThresh / 2.5
 
 ENT.term_SoundLevelShift = 10
 
@@ -32,5 +32,6 @@ ENT.FistDamageMul = 0.45
 ENT.ThrowingForceMul = 0.5
 ENT.SpawnHealth = 210
 ENT.MyPhysicsMass = 150
+
 
 ENT.FootstepClomping = false
