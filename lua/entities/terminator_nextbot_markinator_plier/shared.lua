@@ -79,6 +79,7 @@ ENT.MetallicMoveSounds = false
 ENT.DoMetallicDamage = false
 ENT.CanSwim = true
 ENT.BreathesAir = true
+ENT.Term_Leaps = true
 
 function ENT:AdditionalInitialize()
     self.isTerminatorHunterChummy = "mark"
@@ -304,3 +305,4 @@ ENT.MyClassTask = {
         end
     end,
 }
+
