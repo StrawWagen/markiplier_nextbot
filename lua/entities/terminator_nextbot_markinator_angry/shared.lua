@@ -18,7 +18,7 @@ if CLIENT then
 end
 
 ENT.IsFodder = false
-ENT.CoroutineThresh = terminator_Extras.baseCoroutineThresh / 6.5 -- anger causes STUPIDITY!
+ENT.CoroutineThresh = terminator_Extras.baseCoroutineThresh / 3 -- anger causes STUPIDITY!
 
 ENT.term_SoundLevelShift = 15
 
@@ -29,5 +29,6 @@ end
 
 function ENT:IsReallyAngry()
     return true -- always angry
+
 
 end
