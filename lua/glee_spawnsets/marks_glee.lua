@@ -1,5 +1,5 @@
 if game.IsDedicated() then
-    RunConsoleCommand( "markiplier_nextbot_content", 1 )
+    RunConsoleCommand( "markiplier_nextbot_dynamiccontent", 1 )
 
 end
 
@@ -56,3 +56,4 @@ local markSpawnSet = {
 }
 
 table.insert( GLEE_SPAWNSETS, markSpawnSet )
+
