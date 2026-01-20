@@ -2,8 +2,8 @@
 local genericMarkCounter = "terminator_nextbot_markinator*"
 
 local spawnSet = {
-    name = "marks_glee_thehorde", -- unique name
-    prettyName = "Markocalypse",
+    name = "marks_glee_horde", -- unique name
+    prettyName = "The Great Mark Migration",
     description = "It's like fnaf ultimate custom night all over again...",
     difficultyPerMin = "default", -- difficulty per minute
     waveInterval = "default*0.25", -- time between spawn waves
@@ -55,3 +55,4 @@ local spawnSet = {
 }
 
 table.insert( GLEE_SPAWNSETS, spawnSet )
+
