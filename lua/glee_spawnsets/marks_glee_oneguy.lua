@@ -1,7 +1,7 @@
 local markSpawnSet = {
     name = "marks_glee_oneguy", -- unique name
     prettyName = "One Gleeful Mark",
-    description = "One random mark... Who is it? You have to find out...",
+    description = "One random mark... What mark is it? You'll have to find out...",
     difficultyPerMin = "default", -- difficulty per minute
     waveInterval = "default", -- time between spawn waves
     diffBumpWhenWaveKilled = "default", -- when there's <= 1 hunter left, the difficulty is permanently bumped by this amount
@@ -12,7 +12,7 @@ local markSpawnSet = {
     maxSpawnDist = { 4500, 6500 },
     roundEndSound = "default",
     roundStartSound = "default",
-    chanceToBeVotable = 5,
+    chanceToBeVotable = 1,
     spawns = {
         {
             hardRandomChance = nil,
