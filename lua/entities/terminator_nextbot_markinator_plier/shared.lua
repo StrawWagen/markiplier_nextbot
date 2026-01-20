@@ -34,7 +34,8 @@ ENT.MySpecialActions = { -- binds
 if CLIENT then
     language.Add( "terminator_nextbot_markinator_plier", ENT.PrintName )
 
-    local contentVar = GetConVar( "markiplier_nextbot_content" )
+    local contentVar = GetConVar( "markiplier_nextbot_dynamiccontent" )
+    local gotBOTContent
     local gotPMContent
     local attempts = 0
 
@@ -43,6 +44,14 @@ if CLIENT then
 
         if attempts >= 2 then return end -- just in case
 
+        if not gotBOTContent then
+            attempts = attempts + 1
+            steamworks.DownloadUGC( "3649571290", function( path )
+                if not path then return end
+                gotBOTContent = game.MountGMA( path )
+
+            end )
+        end
         if not gotPMContent then
             attempts = attempts + 1
             steamworks.DownloadUGC( "3151172526", function( path )
