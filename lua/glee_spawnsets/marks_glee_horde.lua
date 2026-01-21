@@ -20,7 +20,7 @@ local spawnSet = {
     spawns = {
         {
             name = "mark_angry",
-            prettyName = "A Mark",
+            prettyName = "A Mark (Angry)",
             class = "terminator_nextbot_markinator_angry",
             spawnType = "hunter",
             difficultyCost = 0.1,
@@ -55,4 +55,5 @@ local spawnSet = {
 }
 
 table.insert( GLEE_SPAWNSETS, spawnSet )
+
 
