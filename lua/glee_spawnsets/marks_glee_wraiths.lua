@@ -6,7 +6,7 @@ end
 
 local markSpawnSet = {
     name = "marks_glee_wraiths", -- unique name
-    prettyName = "Mar- Where did he go?",
+    prettyName = "Markiplier!... Isn't here?",
     description = "Alot of cloaking... marks... Is mark a animatronic!?",
     difficultyPerMin = "default", -- difficulty per minute
     waveInterval = "default", -- time between spawn waves
@@ -34,3 +34,4 @@ local markSpawnSet = {
 }
 
 table.insert( GLEE_SPAWNSETS, markSpawnSet )
+
