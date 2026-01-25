@@ -72,8 +72,6 @@ ENT.Models = { MARKINATOR_MODEL }
 
 ENT.TERM_FISTS = "weapon_markinator_fists"
 
-ENT.CoroutineThresh = terminator_Extras.baseCoroutineThresh * 1.85 -- it's big brain time
-
 ENT.term_SoundPitchShift = 0
 ENT.term_SoundLevelShift = 20
 ENT.CanSpeak = true
@@ -314,4 +312,5 @@ ENT.MyClassTask = {
         end
     end,
 }
+
 
