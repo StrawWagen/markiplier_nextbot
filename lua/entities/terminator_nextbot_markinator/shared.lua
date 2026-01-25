@@ -18,7 +18,7 @@ if CLIENT then
 end
 
 ENT.IsFodder = true
-ENT.CoroutineThresh = terminator_Extras.baseCoroutineThresh / 2.5
+ENT.CoroutineThresh = terminator_Extras.baseCoroutineThresh / 1.5
 
 ENT.term_SoundLevelShift = 10
 
@@ -35,3 +35,4 @@ ENT.MyPhysicsMass = 150
 
 
 ENT.FootstepClomping = false
+
